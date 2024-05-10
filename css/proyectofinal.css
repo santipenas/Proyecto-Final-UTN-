@@ -207,6 +207,6 @@ display:block;
 max-width: 225px
 }
 
-.servicio:nth-child(even) {  /* pseudo clase: cuando mis hijos son par,el orden se va a invertgir*/
+.servicio:nth-child(even) {  /* pseudo clase: cuando mis hijos son par,el orden se va a invertir*/
     flex-direction: row-reverse;
 }
