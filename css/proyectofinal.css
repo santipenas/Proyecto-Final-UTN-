@@ -21,7 +21,8 @@ header h1 {
     font-weight: 100;
     font-style: italic;
     display: inline-block;
-    position: relative; /*probar luego con display flex y flex box para ir acomodando*/
+    position: relative;
+    /*probar luego con display flex y flex box para ir acomodando*/
     bottom: 35px;
     margin-left: 10px;
 }
@@ -54,7 +55,8 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-nav ul li a.activo { /*ver ómo al ser una clase dentro de varas etiquetas, combiene aclarar con el . que etoy aplicando solo a la clase interna segun la ruta*/
+nav ul li a.activo {
+    /*ver ómo al ser una clase dentro de varas etiquetas, combiene aclarar con el . que etoy aplicando solo a la clase interna segun la ruta*/
     background-color: #4c76a5;
 }
 
@@ -68,63 +70,63 @@ footer {
     margin-top: 20px;
 }
 
- .holder {
-     max-width: 960px;
-     margin: 0 auto;
- } 
+.holder {
+    max-width: 960px;
+    margin: 0 auto;
+}
 
- h2 {
+h2 {
     color: #2e64a1;
     font-weight: 400;
- }
+}
 
 
 /*Inicio del Home*/
 
- .bienvenidos {
-    width: 75 ;
+.bienvenidos {
+    width: 75;
     padding-right: 10px;
     box-sizing: border-box;
- }
+}
 
- .testimonios {
+.testimonios {
     width: 25%;
     /*background-color: ;*/
- }
+}
 
- .columnas { 
+.columnas {
     display: flex;
     justify-content: space-between;
- }
+}
 
- .bienvenidos p {
+.bienvenidos p {
     font-size: 20px;
- }
+}
 
- .testimonio {
+.testimonio {
     background-color: #ccc;
     padding: 16pxs;
- }
+}
 
- .testimonio .cita {
+.testimonio .cita {
     font-weight: bold;
     font-style: italic;
     font-size: 22px;
     background-color: yellow;
     display: block;
- }
+}
 
- .testimonio .autor {
+.testimonio .autor {
     font-size: 10px;
     text-align: center;
     background-color: lightcoral;
     display: block;
     margin: 12px 0;
- }
+}
 
- /*fin seccion de Home*/
+/*fin seccion de Home*/
 
- /*inicio Nosotros*/
+/*inicio Nosotros*/
 
 .historia p {
     font-size: 12px;
@@ -148,7 +150,7 @@ footer {
 .persona img {
     border-radius: 50%;
     max-width: 60%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .persona h5,
@@ -168,7 +170,7 @@ footer {
     font-style: italic;
 }
 
-.persona p{
+.persona p {
     color: #666;
     font-size: 10px;
 }
@@ -202,12 +204,13 @@ footer {
 }
 
 .servicio img {
-border-radius: 13px;
-display:block;
-max-width: 225px
+    border-radius: 13px;
+    display: block;
+    max-width: 225px
 }
 
-.servicio:nth-child(even) {  /* pseudo clase: cuando mis hijos son par,el orden se va a invertir*/
+.servicio:nth-child(even) {
+    /* pseudo clase: cuando mis hijos son par,el orden se va a invertir*/
     flex-direction: row-reverse;
 }
 
@@ -256,18 +259,31 @@ max-width: 225px
     display: flex;
 }
 
+/*ajusta palabras del formulaclio*/
 .formulario p label {
     min-width: 80px;
     display: flex;
     align-items: center;
 }
 
+
+.formulario p input,
+.formulario p textarea {
+    background: #ddd;
+    border-radius: 5px;
+    border: 1px solid #999;
+    font-size: 14px;
+    padding: 6px 10px;
+}
+
+/*psudo clase para ajustar la palabra mensaje del formulario*/
 .formulario p:nth-child(4) {
     align-items: start;
 }
 
 .formulario textarea {
     resize: none;
+    /*permite que el usuario pueda o no cambiar el tamaño de este espacio*/
     height: 150px;
 }
 
@@ -280,10 +296,9 @@ max-width: 225px
     width: auto;
     position: relative;
     left: 5rem;
-    
     cursor: pointer;
 }
 
 formulario input[type="submit"]:hover {
-    background-color: #2e64a1;    
+    background-color: #2e64a1;
 }
