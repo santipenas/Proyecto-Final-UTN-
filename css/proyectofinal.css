@@ -81,7 +81,7 @@ h2 {
 }
 
 
-/*Inicio del Home*/
+/*Inicio del Home. Main*/
 
 .bienvenidos {
     width: 75;
@@ -123,6 +123,19 @@ h2 {
     display: block;
     margin: 12px 0;
 }
+
+.institucion {
+width: 50%;
+}
+
+.valores {
+    width: 50%;
+}
+
+.columnas .listado, .columnas .listado ul{
+    list-style: none;
+}
+
 
 /*fin seccion de Home*/
 
