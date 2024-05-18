@@ -3,6 +3,15 @@
 /*Comentario: por ahora voy usando las estructuras del css de Flavia, luego pode rir adaptando sobre la base de mi diseño cómo vaya quedando*/
 
 
+
+/* Selector Universal para acomodamiento de margin y padding general
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+}*/
+
+
 body {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
@@ -66,8 +75,24 @@ footer {
     clear: both;
     color: #333;
     text-align: center;
-    padding: 5px 0;
+    padding: 20px 0;
     margin-top: 20px;
+    /*position: fixed;
+    bottom: 0px;
+    width: 100%;
+    para footer fixed en bottom*/
+}
+
+#leyendafinal {
+    font-size: large;
+    font-style: italic;
+    font-weight: 500;
+}
+
+#leyendafinal:hover {
+    color: #2e64a1;
+    text-transform: uppercase;
+    
 }
 
 .holder {
@@ -81,7 +106,7 @@ h2 {
 }
 
 
-/*Inicio del Home. Main*/
+/*Inicio del Home*/
 
 .bienvenidos {
     width: 75;
@@ -125,14 +150,15 @@ h2 {
 }
 
 .institucion {
-width: 50%;
+    width: 50%;
 }
 
 .valores {
     width: 50%;
 }
 
-.columnas .listado, .columnas .listado ul{
+.columnas .listado,
+.columnas .listado ul {
     list-style: none;
 }
 
@@ -142,7 +168,10 @@ width: 50%;
 /*inicio Nosotros*/
 
 .historia p {
-    font-size: 12px;
+    font-size: 13px;
+    column-count: 2;
+    column-gap: 30px;
+    text-align: justify;
 }
 
 .personas {
@@ -174,18 +203,20 @@ width: 50%;
 }
 
 .persona h5 {
-    font-size: 14px;
+    font-size: 15px;
     margin-top: 5px;
 }
 
 .persona h6 {
-    font-size: 11px;
+    font-size: 12px;
     font-style: italic;
 }
 
 .persona p {
     color: #666;
-    font-size: 10px;
+    font-size: 12px;
+    color: black;
+    text-align: center;
 }
 
 
@@ -260,19 +291,20 @@ width: 50%;
     width: 100%;
 }
 
-.datos p {
+.datos p  {
     font-size: 14px;
 }
 
 .datos ul li {
     font-size: 13px;
+    list-style-type: inherit;
 }
 
 .formulario p {
     display: flex;
 }
 
-/*ajusta palabras del formulaclio*/
+/*ajusta palabras del formulario*/
 .formulario p label {
     min-width: 80px;
     display: flex;

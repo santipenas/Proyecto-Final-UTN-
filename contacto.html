@@ -7,11 +7,14 @@
     <title>Proyecto Final: Inmobiliaria</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/proyectofinal.css">
 </head>
 
-<body> 
+<body>
 
     <header>
         <div class="holder">
@@ -30,7 +33,7 @@
             <li><a href="opiniones.html">Opiniones de nuestros clientes</a></li>
             <li><a href="galeria.html">Galería</a></li>
             <li><a href="novedades.html">Novedades</a></li>
-            <li><a class="activo" href="contacto.html">Formulario de Contacto</a></li>
+            <li><a class="activo" href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
 
@@ -55,25 +58,35 @@
                     <textarea name="" id=""></textarea>
                 </p>
                 <p>
-                    <input type="submit" value="Enviar"/>
-                </p>                
+                    <input type="submit" value="Enviar" />
+                </p>
             </form>
         </div>
 
         <div class="datos">
-            <h2>Vías de Comunicación</h2>
-            <p>También podrá comunicarse con nosotros por los siguientes medios</p> <!--agregar luego imagen del mapa con ubicacion de la inmobiliaria-->
-            <ul>
-                <li>Teléfono: 4780-5423</li>
-                <li>Email: hola@penaspropiedades.com.ar</li>
-                <li>Facebook: Peñas Propiedades</li>
-                <li>Instagram: Peñas Propiedades</li>
-            </ul>
+            <div>
+                <h2>Vías de Comunicación</h2>
+                <p>También podrá comunicarse con nosotros por los siguientes medios</p>
+                <!--agregar luego imagen del mapa con ubicacion de la inmobiliaria-->
+                <ul>
+                    <li> <i class="fa-solid fa-phone"></i> Teléfono: 4780-5423</li>
+                    <li> <i class="fa-brands fa-whatsapp"></i> WhatsApp: (+549)11 4354-7898</li>
+                    <li> <i class="fa-regular fa-envelope"></i> Email: hola@penaspropiedades.com.ar</li>
+                    <li> <i class="fa-brands fa-facebook"></i> Facebook: Peñas Propiedades</li>
+                    <li> <i class="fa-brands fa-instagram"></i> Instagram: Peñas Propiedades</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Ubicación de lnmobiliaria</h2>
+                <p>Av. Del Libertador 7172, CABA</p>
+                <img src="/Recursos Proyecto Final/mapalocal.jpg" alt="ubicacion" width="250px" height="200px">
+            </div>
         </div>
     </main>
 
     <footer>
-        Diseñado por Santiago
+        <span id="leyendafinal"><i class="fa-solid fa-house fa-beat fa-xs"></i> Somos Peñas Propiedades. tu inmobiliaria
+            <i class="fa-solid fa-house fa-beat fa-xs"></i></span>
     </footer>
 
 </body>
