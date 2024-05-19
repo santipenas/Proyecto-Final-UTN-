@@ -111,7 +111,15 @@ h2 {
 .bienvenidos {
     width: 75;
     padding-right: 10px;
-    box-sizing: border-box;
+    box-sizing: border-box;    
+}
+
+.bienvenidos h2 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #2e64a1;
+    padding-bottom: 10px;
 }
 
 .testimonios {
@@ -122,6 +130,14 @@ h2 {
 .columnas {
     display: flex;
     justify-content: space-between;
+}
+
+.columnas h2 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #2e64a1;
+    padding-bottom: 10px;
 }
 
 .bienvenidos p {
@@ -167,11 +183,36 @@ h2 {
 
 /*inicio Nosotros*/
 
+.historia h2 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #2e64a1;
+    padding-bottom: 10px;
+}
+
 .historia p {
     font-size: 13px;
     column-count: 2;
     column-gap: 30px;
     text-align: justify;
+}
+/*
+.staff {
+    margin: 50px 5px;
+}
+
+.historia {
+    margin-top: 40px;
+}
+unofrmar criterios de margin y paddin en todas las secciones*/
+
+.staff h2 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #2e64a1;
+    padding-bottom: 10px;
 }
 
 .personas {
@@ -283,25 +324,71 @@ h2 {
 /*inicio sección contacto*/
 
 .contacto {
-    display: flex;
-    gap: 24px;
+    display: flex;    
+    /*border: 1px solid #ccc;
+    border-radius: 10px;*/
+     
 }
 
 .contacto div {
-    width: 100%;
+    width: 50%;
+    padding: 16px;
+    margin: 5px;
+}
+
+.ubicacion {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+
+.ubicacion p{
+    display: flex;
+    justify-content: center;
+ }
+
+ .ubicacion img {
+    padding: 0% 20%;
+ }
+
+.datos {
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
 .datos p  {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .datos ul li {
     font-size: 13px;
-    list-style-type: inherit;
+    line-height: 35px;
+    padding: 0 45px;
+}
+
+.formulario {
+   
 }
 
 .formulario p {
-    display: flex;
+    display: flex;    
+}
+
+.contacto h2 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #2e64a1;
+    padding-bottom: 10px;
+}
+
+.formulario h2 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #2e64a1;
+    padding-bottom: 10px;
 }
 
 /*ajusta palabras del formulario*/
@@ -311,7 +398,6 @@ h2 {
     align-items: center;
 }
 
-
 .formulario p input,
 .formulario p textarea {
     background: #ddd;
@@ -319,6 +405,7 @@ h2 {
     border: 1px solid #999;
     font-size: 14px;
     padding: 6px 10px;
+    width: 80%;
 }
 
 /*psudo clase para ajustar la palabra mensaje del formulario*/
@@ -340,7 +427,7 @@ h2 {
     padding: 6px 20px;
     width: auto;
     position: relative;
-    left: 5rem;
+    left: 26rem;
     cursor: pointer;
 }
 
