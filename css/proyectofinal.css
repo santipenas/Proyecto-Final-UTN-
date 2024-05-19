@@ -27,13 +27,13 @@ header {
 header h1 {
     color: white;
     font-size: 40px;
-    font-weight: 100;
+    font-weight: 300;
     font-style: italic;
     display: inline-block;
     position: relative;
     /*probar luego con display flex y flex box para ir acomodando*/
     bottom: 35px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 nav {
@@ -71,7 +71,7 @@ nav ul li a.activo {
 
 
 footer {
-    background-color: #ccc;
+    background-color: #6da9ed;
     clear: both;
     color: #333;
     text-align: center;
@@ -87,12 +87,12 @@ footer {
     font-size: large;
     font-style: italic;
     font-weight: 500;
+    color: white;
 }
 
 #leyendafinal:hover {
-    color: #2e64a1;
     text-transform: uppercase;
-    
+
 }
 
 .holder {
@@ -111,7 +111,7 @@ h2 {
 .bienvenidos {
     width: 75;
     padding-right: 10px;
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
 .bienvenidos h2 {
@@ -130,7 +130,14 @@ h2 {
 .columnas {
     display: flex;
     justify-content: space-between;
+    margin-top: 35px;
 }
+
+/*
+.columnas p {
+    text-align: center;
+    font-style: ;
+}*/
 
 .columnas h2 {
     color: #2e64a1;
@@ -138,6 +145,10 @@ h2 {
     font-style: italic;
     border-bottom: 1px solid #2e64a1;
     padding-bottom: 10px;
+}
+
+.columnas h4 {
+    text-align: center;
 }
 
 .bienvenidos p {
@@ -178,6 +189,11 @@ h2 {
     list-style: none;
 }
 
+.listado div,
+.valores div  {
+    margin: 40px 5px;
+}
+
 
 /*fin seccion de Home*/
 
@@ -197,15 +213,12 @@ h2 {
     column-gap: 30px;
     text-align: justify;
 }
-/*
+
+
 .staff {
-    margin: 50px 5px;
+    margin: 35px 5px;
 }
 
-.historia {
-    margin-top: 40px;
-}
-unofrmar criterios de margin y paddin en todas las secciones*/
 
 .staff h2 {
     color: #2e64a1;
@@ -324,10 +337,9 @@ unofrmar criterios de margin y paddin en todas las secciones*/
 /*inicio sección contacto*/
 
 .contacto {
-    display: flex;    
+    display: flex;
     /*border: 1px solid #ccc;
     border-radius: 10px;*/
-     
 }
 
 .contacto div {
@@ -343,21 +355,21 @@ unofrmar criterios de margin y paddin en todas las secciones*/
 }
 
 
-.ubicacion p{
+.ubicacion p {
     display: flex;
     justify-content: center;
- }
+}
 
- .ubicacion img {
+.ubicacion img {
     padding: 0% 20%;
- }
+}
 
 .datos {
     border: 1px solid #ccc;
     border-radius: 10px;
 }
 
-.datos p  {
+.datos p {
     font-size: 15px;
 }
 
@@ -368,11 +380,11 @@ unofrmar criterios de margin y paddin en todas las secciones*/
 }
 
 .formulario {
-   
+    margin-top: 35px;
 }
 
 .formulario p {
-    display: flex;    
+    display: flex;
 }
 
 .contacto h2 {
