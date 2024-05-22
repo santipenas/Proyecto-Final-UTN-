@@ -149,6 +149,11 @@ h2 {
 
 .columnas h4 {
     text-align: center;
+    /*
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 0%;
+    margin: 0px 0;*/
 }
 
 .bienvenidos p {
@@ -353,7 +358,8 @@ h2 {
 .venta img {
     border-radius: 13px;
     display: block;
-    max-width: 225px
+    max-width: 225px;
+    cursor: pointer;
 }
 
 .alquiler {
@@ -377,7 +383,8 @@ h2 {
 .alquiler img {
     border-radius: 13px;
     display: block;
-    max-width: 225px
+    max-width: 225px;
+    cursor: pointer;
 }
 
 .venta h5,
@@ -386,6 +393,10 @@ h2 {
     color: white;
     justify-content: center;
     display: flex;
+}
+
+.alquiler img, .venta img {
+    transition: all 1s ease 150ms;
 }
 
 /*img animaciones*/
@@ -397,9 +408,7 @@ h2 {
     transform: scale(1.1);
 }
 
-.alquiler img, .venta img {
-    transition: all 1s ease 150ms;
-}
+
 
 
 /* fin sección galeria*/
