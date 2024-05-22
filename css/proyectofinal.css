@@ -331,6 +331,77 @@ h2 {
     margin-right: 2%;
 }
 
+.venta {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px 0;
+    display: flex;
+    gap: 32px;
+    justify-content: space-around;
+    
+}
+
+.venta h4 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #2e64a1;
+    padding-bottom: 10px;
+}
+
+.venta img {
+    border-radius: 13px;
+    display: block;
+    max-width: 225px
+}
+
+.alquiler {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px 0;
+    display: flex;
+    gap: 32px;
+    justify-content: space-around;
+}
+
+.alquiler h4 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #2e64a1;
+    padding-bottom: 10px;
+}
+
+.alquiler img {
+    border-radius: 13px;
+    display: block;
+    max-width: 225px
+}
+
+.venta h5,
+.alquiler h5 {
+    background-color: #2e64a1;
+    color: white;
+    justify-content: center;
+    display: flex;
+}
+
+/*img animaciones*/
+.venta img:hover {
+    transform: scale(1.1);
+}
+
+.alquiler img:hover {
+    transform: scale(1.1);
+}
+
+.alquiler img, .venta img {
+    transition: all 1s ease 150ms;
+}
+
+
 /* fin sección galeria*/
 
 
@@ -420,7 +491,7 @@ h2 {
     width: 80%;
 }
 
-/*psudo clase para ajustar la palabra mensaje del formulario*/
+/*pseudo clase para ajustar la palabra mensaje del formulario*/
 .formulario p:nth-child(4) {
     align-items: start;
 }
