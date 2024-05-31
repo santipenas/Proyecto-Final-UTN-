@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+
+</html>
+
+<!--**Ejercicio 3:**
+Dado el siguiente array de alumnos utilizar los métodos de array vistos para generar un array con los alumnos aprobados. 
+Se considera aprobado todo alumno que tenga una nota mayor o igual a 7.-->
+
+<script>
+    let alumnos = [
+        {
+            nombre: 'Juan Gomez',
+            nota: 7
+        },
+        {
+            nombre: 'Pedro Rodriguez',
+            nota: 4
+        },
+        {
+            nombre: 'Roxana García',
+            nota: 8
+        }, {
+            nombre: 'Luciano Lopez',
+            nota: 5
+        }, {
+            nombre: 'Fernanda Gimenez',
+            nota: 6
+        }, {
+            nombre: 'Florencia Martinez',
+            nota: 10
+        }, {
+            nombre: 'Raul Sanchez',
+            nota: 7
+        }, {
+            nombre: 'Sandra Figueroa',
+            nota: 8
+        }
+    ];
+    //*tengo que usar metodo filter que funcionaria como un iterador de mi variable array de alumnos y filtrar con el intereador para que me devuelva alumnos que tengan una nota mayor o igual a 7 mediante el if solo selecciondo la propiedad de la nota*/
+
+    let aprobados = alumnos.filter(function (alumnoaprobado) { // Duda: ?por qué la variable de la función debe llevar otro nombre como parámetro y no las variables anteriores?
+        if (alumnos.nota >= 7) {
+            return 'alumnoaprobado';
+        };
+    });
+
+</script>
