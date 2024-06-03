@@ -37,7 +37,7 @@ header h1 {
 }
 
 nav {
-    background-color: #6da9ed;
+    background-color: #CA5D53;
     margin-bottom: 20px;
 }
 
@@ -71,7 +71,7 @@ nav ul li a.activo {
 
 
 footer {
-    background-color: #6da9ed;
+    background-color: #2e64a1;;
     clear: both;
     color: #333;
     text-align: center;
@@ -118,7 +118,7 @@ h2 {
     color: #2e64a1;
     font-weight: 500;
     font-style: italic;
-    border-bottom: 1px solid #2e64a1;
+    border-bottom: 1px solid #CA5D53;
     padding-bottom: 10px;
 }
 
@@ -143,7 +143,7 @@ h2 {
     color: #2e64a1;
     font-weight: 500;
     font-style: italic;
-    border-bottom: 1px solid #2e64a1;
+    border-bottom: 1px solid #CA5D53;
     padding-bottom: 10px;
 }
 
@@ -208,7 +208,7 @@ h2 {
     color: #2e64a1;
     font-weight: 500;
     font-style: italic;
-    border-bottom: 1px solid #2e64a1;
+    border-bottom: 1px solid #CA5D53;
     padding-bottom: 10px;
 }
 
@@ -229,7 +229,7 @@ h2 {
     color: #2e64a1;
     font-weight: 500;
     font-style: italic;
-    border-bottom: 1px solid #2e64a1;
+    border-bottom: 1px solid #CA5D53;
     padding-bottom: 10px;
 }
 
@@ -245,7 +245,7 @@ h2 {
     text-align: center;
     padding: 13px;
     box-sizing: border-box;
-    background-color: orange;
+    background-color: #CA5D53;
 }
 
 .persona img {
@@ -258,7 +258,7 @@ h2 {
 .persona h6 {
     margin: 0;
     font-weight: norml;
-    color: "#2e64a1";
+    color: white;
 }
 
 .persona h5 {
@@ -269,6 +269,7 @@ h2 {
 .persona h6 {
     font-size: 12px;
     font-style: italic;
+    color: rgb(31, 30, 30);
 }
 
 .persona p {
@@ -298,7 +299,7 @@ h2 {
     color: #2e64a1;
     font-weight: 500;
     font-style: italic;
-    border-bottom: 1px solid #2e64a1;
+    border-bottom: 1px solid #CA5D53;
     padding-bottom: 10px;
 }
 
@@ -351,7 +352,7 @@ h2 {
     color: #2e64a1;
     font-weight: 500;
     font-style: italic;
-    border-bottom: 1px solid #2e64a1;
+    border-bottom: 1px solid #CA5D53;
     padding-bottom: 10px;
 }
 
@@ -376,7 +377,7 @@ h2 {
     color: #2e64a1;
     font-weight: 500;
     font-style: italic;
-    border-bottom: 1px solid #2e64a1;
+    border-bottom: 1px solid #CA5D53;
     padding-bottom: 10px;
 }
 
@@ -471,7 +472,7 @@ h2 {
     color: #2e64a1;
     font-weight: 500;
     font-style: italic;
-    border-bottom: 1px solid #2e64a1;
+    border-bottom: 1px solid #CA5D53;
     padding-bottom: 10px;
 }
 
@@ -479,7 +480,7 @@ h2 {
     color: #2e64a1;
     font-weight: 500;
     font-style: italic;
-    border-bottom: 1px solid #2e64a1;
+    border-bottom: 1px solid #CA5D53;
     padding-bottom: 10px;
 }
 
@@ -512,7 +513,7 @@ h2 {
 }
 
 .formulario input[type="submit"] {
-    background: #6da9ed;
+    background: #CA5D53;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     color: white;
     font-size: 16px;
