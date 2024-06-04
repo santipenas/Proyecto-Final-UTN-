@@ -1,4 +1,5 @@
-/*font-family: "Open Sans", sans-serif;*/
+/*
+*font-family: "Open Sans", serif;*/
 
 /*Comentario: por ahora voy usando las estructuras del css de Flavia, luego pode rir adaptando sobre la base de mi diseño cómo vaya quedando*/
 
@@ -71,7 +72,8 @@ nav ul li a.activo {
 
 
 footer {
-    background-color: #2e64a1;;
+    background-color: #2e64a1;
+    ;
     clear: both;
     color: #333;
     text-align: center;
@@ -195,7 +197,7 @@ h2 {
 }
 
 .listado div,
-.valores div  {
+.valores div {
     margin: 40px 5px;
 }
 
@@ -345,7 +347,7 @@ h2 {
     display: flex;
     gap: 32px;
     justify-content: space-around;
-    
+
 }
 
 .venta h4 {
@@ -396,7 +398,8 @@ h2 {
     display: flex;
 }
 
-.alquiler img, .venta img {
+.alquiler img,
+.venta img {
     transition: all 1s ease 150ms;
 }
 
@@ -408,6 +411,20 @@ h2 {
 .alquiler img:hover {
     transform: scale(1.1);
 }
+
+.venta a, .alquiler a {
+    margin: 10px;
+    display: block;
+    text-align: center;
+}
+
+.venta a:hover,
+.alquiler a:hover {
+    color: #CA5D53;
+    font-weight: bold;
+}
+
+
 
 
 
