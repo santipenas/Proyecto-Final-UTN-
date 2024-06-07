@@ -2,8 +2,10 @@ import React from 'react';
 
 const Footer = (props) => {
     return (
-        <div>Footer</div>
+            <Footer>
+                <p>Somos Peñas Propiedades, tu inmobiliaria</p> 
+            </Footer>
     );
-};
+}
 
 export default Footer;
