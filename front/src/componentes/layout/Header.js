@@ -2,14 +2,14 @@ import React from 'react';
 
 const Header = (props) => {
     return (
-        <Header>
+        <header>
             <div className='holder'>
-                    <img src="public/imgagenes/logo1.png" width="100" alt="logo"/>
+                    <img src=".imagenes/logo1.png" width="100" alt="logo"/>
                     <h1>Peñas Propiedades</h1>
             </div>
-        </Header>
-
+        </header>
     );
-};
+}
 
 export default Header;
+

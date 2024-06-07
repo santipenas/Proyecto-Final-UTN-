@@ -1,5 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.css';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+
 import Header from './componentes/layout/Header';
 import Nav from './componentes/layout/Nav';
 import Footer from './componentes/layout/Footer';
@@ -10,7 +14,7 @@ import ContactoPage from './paginas/ContactoPage';
 import GaleriaPage from './paginas/GaleriaPage';
 import ServiciosPage from './paginas/ServiciosPage';
 import NovedadesPage from './paginas/NovedadesPage';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 
 
 function App() {
@@ -29,7 +33,7 @@ function App() {
           <Route path='/novedades' element={<NovedadesPage />} />
         </Routes>
       </BrowserRouter>
-
+      
       <Footer />
     </div>
   );

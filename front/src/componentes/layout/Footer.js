@@ -2,9 +2,9 @@ import React from 'react';
 
 const Footer = (props) => {
     return (
-            <Footer>
+            <footer>
                 <p>Somos Peñas Propiedades, tu inmobiliaria</p> 
-            </Footer>
+            </footer>
     );
 }
 
