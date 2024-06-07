@@ -1,6 +1,6 @@
-import React from 'react'; //etsa lina puede estar o no, por las dudas la
+import React from 'react'; 
 
-const Header = () => {
+const Header = (props) => {
     return (
         <div>Header</div>
     );
