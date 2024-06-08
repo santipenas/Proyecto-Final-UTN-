@@ -2,7 +2,9 @@ import React from 'react';
 
 const NosotrosPage = (props) => {
     return (
-        <div>NosotrosPage</div>
+        <main className='holder'>
+            <div>NosotrosPage</div>
+        </main>
     );
 }
 
