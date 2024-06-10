@@ -1,8 +1,8 @@
 // import logo from './logo.svg';
 // import './App.css';
 
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
 
 import Header from './componentes/layout/Header';
 import Nav from './componentes/layout/Nav';
@@ -12,7 +12,7 @@ import HomePage from './paginas/HomePage';
 import NosotrosPage from './paginas/NosotrosPage';
 import ContactoPage from './paginas/ContactoPage';
 import GaleriaPage from './paginas/GaleriaPage';
-import ServiciosPage from './paginas/ServiciosPage';
+import ServiciosPage from './paginas/ServiciosPage'; 
 import NovedadesPage from './paginas/NovedadesPage';
 
 

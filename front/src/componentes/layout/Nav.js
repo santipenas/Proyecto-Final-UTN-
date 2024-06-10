@@ -7,12 +7,12 @@ const Nav = (props) => {
             <nav>  
                 <div> 
                     <ul>
-                        <li><link to='/'>Home</link></li>
-                        <li><link to='/nosotros'>Nosotros</link></li>
-                        <li><link to='/contacto'>Contacto</link></li>
-                        <li><link to='/galeria'>Galeria</link></li>
-                        <li><link to='/servicios'>Servicios</link></li>
-                        <li><link to='/novedades'>Novedades</link></li>
+                        <li><Link to='/'>Home</Link></li>
+                        <li><Link to='/nosotros'>Nosotros</Link></li>
+                        <li><Link to='/contacto'>Contacto</Link></li>
+                        <li><Link to='/galeria'>Galeria</Link></li>
+                        <li><Link to='/servicios'>Servicios</Link></li>
+                        <li><Link to='/novedades'>Novedades</Link></li>
                     </ul>
                 </div> 
             </nav>
