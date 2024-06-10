@@ -6,7 +6,7 @@ const HomePage = (props) => {
         <div>
             <main className="holder">
                 <div>
-                    <img src="Recursos Proyecto Final/varios5.jpg" width= "900" height="500" alt="nosotros" />
+                    <img src="../../imagenes/varios5.jpg" width= "900" height="500" alt="nosotros" />
 
                 </div>
                 <div className="encabezado">

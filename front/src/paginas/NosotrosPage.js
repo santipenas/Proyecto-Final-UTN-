@@ -37,14 +37,14 @@ const NosotrosPage = (props) => {
                 <h2>Staff</h2>
                 <div className="personas">
                     <div className="persona">
-                        <img src="img/img/nosotros/nosotros1.jpg" alt="Santiago Penas" />
+                        <img src="../../imagenes/nosotros1 - copia.jpg" alt="Santiago Penas" />
                         <h5>Santiago Penas</h5>
                         <h6>Director Comercial</h6>
                         <p>Lic. En Filosofía , asumío la Dirección de le empresa desde el 2010. Desde entonces, su
                             compromiso y su capacidad de liderarzgo, permitieron el crecimiento de la empresa. </p>
                     </div>
                     <div className="persona">
-                        <img src="img/img/nosotros/nosotros3.jpg" alt="Mario Penas" />
+                        <img src="../../imagenes/nosotros3 - copia.jpg" alt="Mario Penas" />
                         <h5>Mario Penas</h5>
                         <h6>Gerente General</h6>
                         <p>Fundador de la inmobiliaria hace 35 años, cuando daba sus primeros pasos en el ambito
@@ -52,7 +52,7 @@ const NosotrosPage = (props) => {
                         </p>
                     </div>
                     <div className="persona">
-                        <img src="img/img/nosotros/nosotros4.jpg" alt="Ezequiel Zabala" />
+                        <img src="../../imagenes/nosotros2 - copia.jpg" alt="Ezequiel Zabala" />
                         <h5>Guadalupe Zabala</h5>
                         <h6>Ventas</h6>
                         <p>Nuestra vendedora estrella se sumó hace 6 años a la empresa, y desde entonces es quien más
@@ -60,7 +60,7 @@ const NosotrosPage = (props) => {
                             sobre los procesos de venta.</p>
                     </div>
                     <div className="persona">
-                        <img src="img/img/nosotros/nosotros2.jpg" alt="Flavia Ludeña" />
+                        <img src="../../imagenes/nosotros4 - copia.jpg" alt="Flavia Ludeña" />
                         <h5>Flavia Ludeña</h5>
                         <h6>Alquileres</h6>
                         <p>Lic. en Administración, Flavia ha sabido darle su impronta personal a la inmobiliaria y potenciar
@@ -68,7 +68,7 @@ const NosotrosPage = (props) => {
                             legales y administración.</p>
                     </div>
                     <div className="persona">
-                        <img src="img/img/nosotros/nosotros5.jpg" alt="Mauricio Tiano" />
+                        <img src="../../imagenes/nosotros5 - copia.jpg" alt="Mauricio Tiano" />
                         <h5>Mauricio Tiano</h5>
                         <h6>Marketing</h6>
                         <p> Mauricio forma parte de nuestro Staff desde hace 3 años, y supo cómo potenciar a la empresa

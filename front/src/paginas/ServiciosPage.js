@@ -5,7 +5,7 @@ const ServiciosPage = (props) => {
         <main className="holder">
             <h2>Servicios</h2>
             <div className="servicio">
-                <img src="Recursos Proyecto Final/varios6.jpg" alt="Venta y alquiler de inmuebles" />
+                <img src="../../imagenes/serviciosventa.jpg" alt="Venta y alquiler de inmuebles" />
                 <div className="info">
                     <h4>Venta y Alquiler de Inmuebles</h4>
                     <p>Cada cliente es único, por lo que te asesoramos de manera específica y personalizada.
@@ -17,7 +17,7 @@ const ServiciosPage = (props) => {
                 </div>
             </div>
             <div className="servicio">
-                <img src="Recursos Proyecto Final/tasacion.jpeg" alt="Tasaciones" />
+                <img src="../../imagenes/serviciostasacion.jpeg" alt="Tasaciones" />
                 <div class="info">
                     <h4>Tasaciones Profesionales</h4>
                     <p>Toda operación inmobiliaria exitosa comienza con una correcta Tasación. La importancia de un
@@ -30,7 +30,7 @@ const ServiciosPage = (props) => {
                 </div>
             </div>
             <div className="servicio">
-                <img src="Recursos Proyecto Final/servicios6.jpeg" alt="Administración" />
+                <img src="../../imagenes/servicios6.jpeg" alt="Administración" />
                 <div className="info">
                     <h4>Búsquedas poersonalizadas</h4>
                     <p>Buscar una propiedad puede ser una tarea agotadora. Para evitarte esto, contamos con un servicio

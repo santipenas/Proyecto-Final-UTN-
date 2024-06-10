@@ -18,7 +18,7 @@ const ContactoPage = (props) => {
                 <div className="ubicacion">
                     <h2>Ubicación Casa Central</h2>
                     <p>Av. Del Libertador 7172, CABA</p>
-                    <img src="Recursos Proyecto Final/mapalocal.jpg" alt="ubicacion" width="280px" height="190px" />
+                    <img src="../../imagenes/mapalocal.jpg" alt="ubicacion" width="280px" height="190px" />
                 </div>
             </main>
 
