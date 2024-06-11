@@ -1,12 +1,12 @@
 import React from 'react';
 
-// PRIMERO PROBAR QUE FUNCIONE EL SITIO ANTES DE MIGRAR TODO EL CONTENIDO DE MAIN
+
 const HomePage = (props) => {
     return (
         <div>
             <main className="holder">
                 <div>
-                    <img src="../../imagenes/varios5.jpg" width= "900" height="500" alt="nosotros" />
+                    <img src="../../imagenes/varios5.jpg" width= "100%" height="500" alt="nosotros" />
 
                 </div>
                 <div className="encabezado">
