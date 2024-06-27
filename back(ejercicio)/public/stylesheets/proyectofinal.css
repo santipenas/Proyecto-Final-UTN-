@@ -1,0 +1,543 @@
+/*
+*font-family: "Open Sans", serif;*/
+
+/*Comentario: por ahora voy usando las estructuras del css de Flavia, luego pode rir adaptando sobre la base de mi diseño cómo vaya quedando*/
+
+
+
+/* Selector Universal para acomodamiento de margin y padding general
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+}*/
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+header {
+    background-color: #2e64a1;
+    padding: 16 px 0;
+
+}
+
+header h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 300;
+    font-style: italic;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav {
+    background-color: #CA5D53;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    flex-grow: 1;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 3px 6px;
+    display: block;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+nav ul li a.activo {
+    /*ver ómo al ser una clase dentro de varas etiquetas, combiene aclarar con el . que etoy aplicando solo a la clase interna segun la ruta*/
+    background-color: #4c76a5;
+}
+
+
+footer {
+    background-color: #2e64a1;
+    ;
+    clear: both;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    /*position: fixed;
+    bottom: 0px;
+    width: 100%;
+    para footer fixed en bottom*/
+}
+
+#leyendafinal {
+    font-size: large;
+    font-style: italic;
+    font-weight: 500;
+    color: white;
+}
+
+#leyendafinal:hover {
+    text-transform: uppercase;
+
+}
+
+.holder {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #2e64a1;
+    font-weight: 400;
+}
+
+
+/*Inicio del Home*/
+
+.bienvenidos {
+    width: 75;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.bienvenidos h2 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #CA5D53;
+    padding-bottom: 10px;
+}
+
+.testimonios {
+    width: 25%;
+    /*background-color: ;*/
+}
+
+.columnas {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+/*
+.columnas p {
+    text-align: center;
+    font-style: ;
+}*/
+
+.columnas h2 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #CA5D53;
+    padding-bottom: 10px;
+}
+
+.columnas h4 {
+    text-align: center;
+    /*
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 0%;
+    margin: 0px 0;*/
+}
+
+.bienvenidos p {
+    font-size: 20px;
+}
+
+.testimonio {
+    background-color: #ccc;
+    padding: 16pxs;
+}
+
+.testimonio .cita {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 22px;
+    background-color: yellow;
+    display: block;
+}
+
+.testimonio .autor {
+    font-size: 10px;
+    text-align: center;
+    background-color: lightcoral;
+    display: block;
+    margin: 12px 0;
+}
+
+.institucion {
+    width: 50%;
+}
+
+.valores {
+    width: 50%;
+}
+
+.columnas .listado,
+.columnas .listado ul {
+    list-style: none;
+}
+
+.listado div,
+.valores div {
+    margin: 40px 5px;
+}
+
+
+/*fin seccion de Home*/
+
+/*inicio Nosotros*/
+
+.historia h2 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #CA5D53;
+    padding-bottom: 10px;
+}
+
+.historia p {
+    font-size: 13px;
+    column-count: 2;
+    column-gap: 30px;
+    text-align: justify;
+}
+
+
+.staff {
+    margin: 35px 5px;
+}
+
+
+.staff h2 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #CA5D53;
+    padding-bottom: 10px;
+}
+
+.personas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.persona {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 18%;
+    text-align: center;
+    padding: 13px;
+    box-sizing: border-box;
+    background-color: #CA5D53;
+}
+
+.persona img {
+    border-radius: 50%;
+    max-width: 60%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.persona h5,
+.persona h6 {
+    margin: 0;
+    font-weight: norml;
+    color: white;
+}
+
+.persona h5 {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.persona h6 {
+    font-size: 12px;
+    font-style: italic;
+    color: rgb(31, 30, 30);
+}
+
+.persona p {
+    color: #666;
+    font-size: 12px;
+    color: black;
+    text-align: center;
+}
+
+
+/*fin nosotros*/
+
+/*inicio servicios*/
+
+
+.servicio {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px 0;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.servicio .info h4 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #CA5D53;
+    padding-bottom: 10px;
+}
+
+.servicio .info p {
+    font-size: 13px;
+}
+
+.servicio img {
+    border-radius: 13px;
+    display: block;
+    max-width: 225px
+}
+
+.servicio:nth-child(even) {
+    /* pseudo clase: cuando mis hijos son par,el orden se va a invertir*/
+    flex-direction: row-reverse;
+}
+
+/*fin seccion servicios*/
+
+/*inicio seccion galeria*/
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.galeria img {
+    width: 18%;
+    border: 1px solid #ddd;
+    padding: 0.3em;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin-right: 2%;
+}
+
+.venta {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px 0;
+    display: flex;
+    gap: 32px;
+    justify-content: space-around;
+
+}
+
+.venta h4 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #CA5D53;
+    padding-bottom: 10px;
+}
+
+.venta img {
+    border-radius: 13px;
+    display: block;
+    max-width: 225px;
+    cursor: pointer;
+}
+
+.alquiler {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px 0;
+    display: flex;
+    gap: 32px;
+    justify-content: space-around;
+}
+
+.alquiler h4 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #CA5D53;
+    padding-bottom: 10px;
+}
+
+.alquiler img {
+    border-radius: 13px;
+    display: block;
+    max-width: 225px;
+    cursor: pointer;
+}
+
+.venta h5,
+.alquiler h5 {
+    background-color: #2e64a1;
+    color: white;
+    justify-content: center;
+    display: flex;
+}
+
+.alquiler img,
+.venta img {
+    transition: all 1s ease 150ms;
+}
+
+/*img animaciones*/
+.venta img:hover {
+    transform: scale(1.1);
+}
+
+.alquiler img:hover {
+    transform: scale(1.1);
+}
+
+.venta a, .alquiler a {
+    margin: 10px;
+    display: block;
+    text-align: center;
+}
+
+.venta a:hover,
+.alquiler a:hover {
+    color: #CA5D53;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* fin sección galeria*/
+
+
+/*inicio sección contacto*/
+
+.contacto {
+    display: flex;
+    /*border: 1px solid #ccc;
+    border-radius: 10px;*/
+}
+
+.contacto div {
+    width: 50%;
+    padding: 16px;
+    margin: 5px;
+}
+
+.ubicacion {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+
+.ubicacion p {
+    display: flex;
+    justify-content: center;
+}
+
+.ubicacion img {
+    padding: 0% 20%;
+}
+
+.datos {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.datos p {
+    font-size: 15px;
+}
+
+.datos ul li {
+    font-size: 13px;
+    line-height: 35px;
+    padding: 0 45px;
+}
+
+.formulario {
+    margin-top: 35px;
+}
+
+.formulario p {
+    display: flex;
+}
+
+.contacto h2 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #CA5D53;
+    padding-bottom: 10px;
+}
+
+.formulario h2 {
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #CA5D53;
+    padding-bottom: 10px;
+}
+
+/*ajusta palabras del formulario*/
+.formulario p label {
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.formulario p input,
+.formulario p textarea {
+    background: #ddd;
+    border-radius: 5px;
+    border: 1px solid #999;
+    font-size: 14px;
+    padding: 6px 10px;
+    width: 80%;
+}
+
+/*pseudo clase para ajustar la palabra mensaje del formulario*/
+.formulario p:nth-child(4) {
+    align-items: start;
+}
+
+.formulario textarea {
+    resize: none;
+    /*permite que el usuario pueda o no cambiar el tamaño de este espacio*/
+    height: 150px;
+}
+
+.formulario input[type="submit"] {
+    background: #CA5D53;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 16px;
+    padding: 6px 20px;
+    width: auto;
+    position: relative;
+    left: 26rem;
+    cursor: pointer;
+}
+
+formulario input[type="submit"]:hover {
+    background-color: #2e64a1;
+}
