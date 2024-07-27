@@ -6,6 +6,10 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+//empeizo a armar la ruta del adimn y login
+var loginRouter = require('./routes/admin/login');
+
+//armando variables de sesion, luego vere si debo usarlas en el proyecto final
 
 var app = express();
 
@@ -21,9 +25,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+//agrego manejador delloginRouter
+app.use('/admin/login', loginRouter)
 
-//Aca pongo los ejemplos  y distitnas rutas para ir probando. Luego tendre que sacar o modificar seguramente.
 
+//Aca pongo los ejemplos  y distitnas rutas para ir probando. Luego tendre que sacar o modificar seguramente. Esto basado en la intoduccion de Node, segureo despes tenga que cambair esto.
+/*
 app.get('/prueba', function(req, res,next) {
   res.send('Hola mundo, estoy probando la ruta');
 });
@@ -47,7 +54,7 @@ app.get('/galeria', function(req, res, next) {
 app.get('/contacto', function(req, res, next) {
   res.send('Hola mundo, estoy probando la ruta contacto');
 });
-
+*/
 
 
 
