@@ -4,19 +4,19 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-//la linea de abajo es para indicar que el proyecto va atener variable sde entorno tipo dotenv, par ala integracion con la BD
+//la linea de abajo es para indicar que el proyecto va atener variable sde entorno tipo dotenv, par ala integracion con la BD, dejarla funcionando
 require('dotenv').config();
 
 
 //armando variables de sesion, luego vere si debo usarlas en el proyecto final. Aca activo en el renglnde abajo que sea requisito las varaibles de sesion
-// var session = require('express-session');
+var session = require('express-session');
 
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 //empeizo a armar la ruta del adimn y login
 var loginRouter = require('./routes/admin/login');
-
+var adminRouter = require('./routes/admin/novedades');
 
 
 var app = express();
@@ -31,14 +31,29 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-/* POR AHORA DEJARLO COMENTADO, AL HABILITARLAS ME HABIA DADO ERROR 
+//POR AHORA DEJARLO COMENTADO, AL HABILITARLAS ME HABIA DADO ERROR 
 //variables sesion, esto es de la tarea de petiiciones y respuesta, Handlebars y va junto con el archivo index.hbs
 
 app.use(session({
-  secret: 'santiago',
+  secret: 'utn',
+  cookie: { maxAge: null },
   resave: false,
   saveUninitialized: true
-}));*/
+}));
+
+secured = async (req, res, next) => {
+  try {
+    console.log(req.session.id_usuario);
+    if (req.session.id_usuario) {
+      next();
+    } else {
+      res.redirect('/admin/login');
+    }
+   } catch (error) {
+      console.log(error);
+  }
+ }  
+
 
 
 
@@ -49,13 +64,19 @@ app.use('/users', usersRouter);
 // abajo conecto con la BD para hacer las consutlas
 var pool = require('./models/bd');
 
+/*
 // consulta de SELECT (ANDA PERFECTO)
 pool.query('select * from inmobiliaria').then(function(resultados) {
   console.log(resultados);
 });
+*/
+ 
+app.use('/admin/login', loginRouter);
 
-//agrego manejador delloginRouter
-app.use('/admin/login', loginRouter)
+app.use('/admin/novedades', secured, adminRouter);
+
+
+
 
 /* 
 MAS DE VARIABLES DE SESION
