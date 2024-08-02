@@ -1,12 +1,54 @@
 var express = require('express');
 var router = express.Router();
+var novedadesModel = require('../../models/novedadesModel');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', async function(req, res, next) {
+
+  var novedades = await novedadesModel.getNovedades();
+
   res.render('admin/novedades', { 
     layout: 'admin/layout',
-    persona: req.session.nombre
+    persona: req.session.nombre, // CUIDADO SI DBO PONER PERSONA O USUARIO EN ESTA LINEA
+    novedades
   });
 });
+
+
+// debo agregar el formulario para AGREGAR
+
+router.get('/agregar', (req, res, next) => {
+  res.render('admin/agregar', {
+    layout: 'admin/layout'
+  });
+});
+
+
+router.post('/agregar', async (req, res, next) => {
+  try {
+
+      // console.log(req.body);
+
+    if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != "") {
+      await novedadesModel.insertNovedad(req.body);
+      res.redirect('/admin/novedades')
+    } else {
+      res.render('admin/agregar', {
+        layout: 'admin/layout',
+        error: true,
+        message: 'Todos los campos son requeridos'
+      })
+    }
+  } catch (error) {
+    console.log(error);
+    res.render('admin/agregar', {
+      layout: 'admin/layout',
+      error: true,
+      message: 'No se cargo la novedad'
+    })
+  }
+
+});
+
 
 module.exports = router;

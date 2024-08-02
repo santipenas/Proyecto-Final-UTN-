@@ -31,7 +31,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//POR AHORA DEJARLO COMENTADO, AL HABILITARLAS ME HABIA DADO ERROR 
+//POR AHORA DEJARLO COMENTADO, ESTO ES DE LA TAREA DE PETICIONES Y RESPUESTA
 //variables sesion, esto es de la tarea de petiiciones y respuesta, Handlebars y va junto con el archivo index.hbs
 
 app.use(session({
@@ -79,7 +79,7 @@ app.use('/admin/novedades', secured, adminRouter);
 
 
 /* 
-MAS DE VARIABLES DE SESION
+MAS DE VARIABLES DE SESION, ERA TAREA DE MODILOS ANTERIORES, NO ES NEESARIO PARA EL PROYETO FINAL
 app.get('/', function(req, res) {
   var conocido = Boolean(req.session.nombre);
 
