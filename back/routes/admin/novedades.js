@@ -15,7 +15,7 @@ router.get('/', async function(req, res, next) {
 });
 
 
-// debo agregar el formulario para AGREGAR
+// FORMULARIO PARA AGREGAR
 
 router.get('/agregar', (req, res, next) => {
   res.render('admin/agregar', {
@@ -23,11 +23,11 @@ router.get('/agregar', (req, res, next) => {
   });
 });
 
-
+// PARA AGREGAR UNA NOVEDAD
 router.post('/agregar', async (req, res, next) => {
   try {
 
-      // console.log(req.body);
+      // console.log(req.body); esto para mostrar en la terminal los datos
 
     if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != "") {
       await novedadesModel.insertNovedad(req.body);
@@ -48,7 +48,68 @@ router.post('/agregar', async (req, res, next) => {
     })
   }
 
+  
+  //PARA ELIMINAR UNA NOVEDAD
+  router.get('/eliminar/:id', async (req, res, next) => {
+
+    var id = req.params.id;
+    //console.log(id); console.log(req.params.id); 
+
+    await novedadesModel.deleteNovedadesById(id);
+    res.redirect('/admin/novedades');
+
+  });
+
 });
+  
+
+  // FORMULARIO DE MODIFICAR CON LOS DATOS CARGADOS
+  router.get('/modificar/:id', async (req, res, next) => {
+
+    var id = req.params.id;
+    // console.log(req.params.id); ESTO ES SOLO PARA MOSTRAR EN LA CONSOLA
+    var novedad = await novedadesModel.getNovedadById(id);
+    res.render('admin/modificar', { // modificar.hbs
+      layout: 'admin/layout',
+      novedad
+    });
+  });
+
+
+
+//DENTRO DE MOFICIAR, PARA MODIFICAR LA NOVEDAD
+
+router.post('/modificar', async (req, res, next) => {
+    try {
+
+        var obj = {
+            titulo: req.body.titulo,
+            subtitulo: req.body.subtitulo,
+            cuerpo: req.body.cuerpo
+        }
+
+        // console.log(obj)
+        // console.log(req.body.id)
+
+        await novedadesModel.modificarNovedadById(obj, req.body.id);
+        res.redirect('/admin/novedades');
+
+    } catch (error) {
+        console.log(error);
+        res.render('admin/modificar', {
+            layout: 'admin/layout',
+            error: true,
+            message: 'No se modifico la novedad'
+        })
+    }
+});
+
+        
+
+
+
+
+
 
 
 module.exports = router;
