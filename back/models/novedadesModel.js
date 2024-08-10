@@ -6,16 +6,16 @@ var pool = require('./bd');
 
 //CRUD: CONSULTAR O LISTAR
 async function getNovedades() {
-    var query = 'select * from novedades';
+    var query = 'select * from clientes'; //  CAMBIO: NOVEDADES x CLIENTES, FUNCIONA OK
     var rows = await pool.query(query);
     return rows;
 }
 
 
-//CRUD : INSERTAR 
+//CRUD : INSERTAR o AGREGAR 
 async function insertNovedad(obj) {
     try {
-        var query = 'insert into novedades set ?';
+        var query = 'insert into clientes set ?'; // CAMBIO: NOVEDADES x CLIENTES
         var rows = await pool.query(query, [obj]);
         return rows;
         
@@ -28,16 +28,14 @@ async function insertNovedad(obj) {
 
 // CRUD: ELIMINAR
 async function deleteNovedadesById(id) {
-    var query = 'delete from novedades where id = ?';
+    var query = 'delete from clientes where id = ?'; // CAMBIO : NOVEDADES x CLIENTES
     var rows = await pool.query(query, [id]);
     return rows;
 }
 
 // CRUD: MODIFICAR LA NOVEDAD
-
-
 async function getNovedadById(id) {
-    var query = 'select * from novedades where id = ?';
+    var query = 'select * from clientes where id = ?'; // CAMBIO : NOVEDADES x CLIENTES
     var rows = await pool.query(query, [id]);
     return rows[0];
 }
@@ -45,7 +43,7 @@ async function getNovedadById(id) {
 // PARA MODIFICAR UPDATE DE LOS DATOS
 async function modificarNovedadById(obj, id) {
     try {
-        var query = 'update novedades set ? where id = ?';
+        var query = 'update clientes set ? where id = ?'; // CAMBIO : NOVEDADES x CLIENTES
         var rows = await pool.query(query, [obj, id]);
         return rows;
     } catch (error) {

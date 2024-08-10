@@ -3,19 +3,19 @@ var router = express.Router();
 var novedadesModel = require('../../models/novedadesModel');
 
 /* GET home page. */
-router.get('/', async function(req, res, next) {
+router.get('/', async function (req, res, next) {
 
   var novedades = await novedadesModel.getNovedades();
 
-  res.render('admin/novedades', { 
+  res.render('admin/novedades', {
     layout: 'admin/layout',
     persona: req.session.nombre, // CUIDADO SI DBO PONER PERSONA O USUARIO EN ESTA LINEA
-    novedades
+    novedades // CAMBIO POR CLIENTES ATENCIO AL TEMPLATE DE HANDLEBAR???
   });
 });
 
 
-// FORMULARIO PARA AGREGAR
+// CONTROLADOR PARA AGREGAR
 
 router.get('/agregar', (req, res, next) => {
   res.render('admin/agregar', {
@@ -23,14 +23,16 @@ router.get('/agregar', (req, res, next) => {
   });
 });
 
-// PARA AGREGAR UNA NOVEDAD
+// PARA CAPTURAR LOS DATOS Y AGREGAR UNA NOVEDAD A LA BD
 router.post('/agregar', async (req, res, next) => {
   try {
 
-      // console.log(req.body); esto para mostrar en la terminal los datos
+    // console.log(req.body); esto para mostrar en la terminal los datos
 
-    if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != "") {
+    if (req.body.nombre != "" && req.body.profesion != "" && req.body.edad != "" && req.body.tipo != "" && req.body.mail != "" && req.body.telefono != "") {
+      // TODO ESTO ES PARA CAPTURAR CADA DATO Y LLEVARLO DEL FORM A LA BASE DE DATOS. CAMBIO CADA DATO DE LA TABLA CLIENTES, FUNIONA OK Y YA ESTA VINCULANDOSE      
       await novedadesModel.insertNovedad(req.body);
+
       res.redirect('/admin/novedades')
     } else {
       res.render('admin/agregar', {
@@ -48,8 +50,8 @@ router.post('/agregar', async (req, res, next) => {
     })
   }
 
-  
-  //PARA ELIMINAR UNA NOVEDAD
+
+  //CONTROLADOR PARA ELIMINAR UNA NOVEDAD
   router.get('/eliminar/:id', async (req, res, next) => {
 
     var id = req.params.id;
@@ -61,50 +63,59 @@ router.post('/agregar', async (req, res, next) => {
   });
 
 });
-  
 
-  // FORMULARIO DE MODIFICAR CON LOS DATOS CARGADOS
-  router.get('/modificar/:id', async (req, res, next) => {
 
-    var id = req.params.id;
-    // console.log(req.params.id); ESTO ES SOLO PARA MOSTRAR EN LA CONSOLA
-    var novedad = await novedadesModel.getNovedadById(id);
-    res.render('admin/modificar', { // modificar.hbs
-      layout: 'admin/layout',
-      novedad
-    });
+// CONTROLADOR DE MODIFICAR CON LOS DATOS CARGADOS
+router.get('/modificar/:id', async (req, res, next) => {
+
+  var id = req.params.id;
+  // console.log(req.params.id); ESTO ES SOLO PARA MOSTRAR EN LA CONSOLA
+  var novedad = await novedadesModel.getNovedadById(id);
+  res.render('admin/modificar', { // modificar.hbs
+    layout: 'admin/layout',
+    novedad
   });
-
-
-
-//DENTRO DE MOFICIAR, PARA MODIFICAR LA NOVEDAD
-
-router.post('/modificar', async (req, res, next) => {
-    try {
-
-        var obj = {
-            titulo: req.body.titulo,
-            subtitulo: req.body.subtitulo,
-            cuerpo: req.body.cuerpo
-        }
-
-        // console.log(obj)
-        // console.log(req.body.id)
-
-        await novedadesModel.modificarNovedadById(obj, req.body.id);
-        res.redirect('/admin/novedades');
-
-    } catch (error) {
-        console.log(error);
-        res.render('admin/modificar', {
-            layout: 'admin/layout',
-            error: true,
-            message: 'No se modifico la novedad'
-        })
-    }
 });
 
-        
+
+
+//DENTRO DE MODIFIAR, CONTROLADOR PARA MODIFICAR LA NOVEDAD
+
+router.post('/modificar', async (req, res, next) => {
+  try {
+    // abajo reemplazo los datos de mi tabla segun mis datos
+    var obj = {
+      nombre: req.body.nombre,
+      profesion: req.body.profesion,
+      edad: req.body.edad,
+      tipo: req.body.tipo,
+      mail: req.body.mail,
+      telefono: req.body.telefono
+
+
+      /*
+      titulo: req.body.titulo,
+      subtitulo: req.body.subtitulo,
+      cuerpo: req.body.cuerpo */
+    }
+
+    // console.log(obj)
+    // console.log(req.body.id)
+
+    await novedadesModel.modificarNovedadById(obj, req.body.id);
+    res.redirect('/admin/novedades');
+
+  } catch (error) {
+    console.log(error);
+    res.render('admin/modificar', {
+      layout: 'admin/layout',
+      error: true,
+      message: 'No se modifico los datos del Cliente, por favor intente nuevamente'
+    })
+  }
+});
+
+
 
 
 
