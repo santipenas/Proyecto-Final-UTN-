@@ -11,7 +11,6 @@ const GaleriaPage = (props) => {
                 <p>Casa con gran jardín en Tigre</p>
                 <img src="../../imagenes/galeria1.jpg" alt="" />
                 <a href="http://ficha.info/p/3c0c52dc05e948c18d9e0a8901024196" target="_blank">Ver ficha</a>
-                {/* VER SI EL TARGET BLANK ME GENERA LUEGO ERRORES EN LA COMPILACION DE REACT, IGUAL FUNCIONA OK Y RENDERIZA PERO ME ADVIERTE */} 
             </div>
             <div>
                 <h4><i class="fa-solid fa-circle-chevron-right"></i> Casa en Venta</h4>

@@ -1,10 +1,6 @@
 /*
 *font-family: "Open Sans", serif;*/
 
-/*Comentario: por ahora voy usando las estructuras del css de Flavia, luego pode rir adaptando sobre la base de mi diseño cómo vaya quedando*/
-
-
-
 /* Selector Universal para acomodamiento de margin y padding general
 * {
     margin: 0px;
@@ -31,7 +27,6 @@ header h1 {
   font-style: italic;
   display: inline-block;
   position: relative;
-  /*probar luego con display flex y flex box para ir acomodando*/
   bottom: 35px;
   margin-left: 20px;
 }
@@ -304,6 +299,9 @@ h2 {
 
 .servicio .info p {
   font-size: 13px;
+  column-count: 2;
+  column-gap: 30px;
+  text-align: justify;
 }
 
 .servicio img {

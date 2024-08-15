@@ -45,7 +45,7 @@ const ServiciosPage = (props) => {
                 <img src="../../imagenes/varios3.jpeg" alt="Asesoría" />
                 <div className="info">
                     <h4> <i class="fa-solid fa-circle-chevron-right"></i> Asesoría legal y contable</h4>
-                    <p>Contamos con un equipo interdisciplinario de expertos en materia legal y contable, capaz de darte soluciones integrales a tus necesidades. Cualquier duda que tengas, estamos para ayudarte.
+                    <p>Contamos con un equipo interdisciplinario de expertos en materia legal y contable, capaz de darte soluciones integrales a tus necesidades. Cualquier duda que tengas, estamos para ayudarte. Damos total asesoramiento a nuestros clientes en temas tales como contratos inmobiliarios, representación legal en pleitos judiciales, y similares. Lo mismo en temas impositivos y contables, ya seas propietario o comrpador, te daremos la mejor asesoría para defender tus derechos e intereses en cada situación.
                     </p>
                 </div>
             </div>
@@ -54,7 +54,7 @@ const ServiciosPage = (props) => {
                 <img src="../../imagenes/servicios6.jpeg" alt="Administración" />
                 <div className="info">
                     <h4> <i class="fa-solid fa-circle-chevron-right"></i> Administración de Alquileres </h4>
-                    <p>Ofrecemos el servicio de administracion de tus propiedades alquiladas. Nos encargamos de todo para que vos solo tengas que poder difrutar de tu renta, mientras nosotros nos encargamos de cobrar el alquiler y de mantener en buenas condiciones tu propiedad mientras esté alquilada.
+                    <p>Ofrecemos el servicio de administracion de tus propiedades alquiladas. Nos encargamos de todo para que vos solo tengas que poder difrutar de tu renta, mientras nosotros nos encargamos de cobrar el alquiler y de mantener en buenas condiciones tu propiedad mientras esté alquilada. Contamos con el personal calificado para brindarte la mejor atención y servicio de administración de propiedades alquiladas
                     </p>
                 </div>
             </div>
