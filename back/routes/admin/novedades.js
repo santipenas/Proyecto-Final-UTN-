@@ -2,6 +2,14 @@ var express = require('express');
 var router = express.Router();
 var novedadesModel = require('../../models/novedadesModel');
 
+/*
+// LAS LINEAS DE ABAJO LAS TRAIGO PARA CLOUDINARY Y FILEUPLOAD Y API
+var util = require('util');
+var cloudinary = require('cloudinary').v2;
+var uploader = util.promisify(cloudinary.uploader.upload);
+*/
+
+
 /* GET home page. */
 router.get('/', async function (req, res, next) {
 
@@ -14,9 +22,42 @@ router.get('/', async function (req, res, next) {
   });
 });
 
+/*
+// CONTROLADOR AGREGAR IMAGENES. NO HABILITAR YA QUE DABA ERRRO PORQUE NO TENGO PLANEADO PONER IMAGENES
+router.post('/agregar', async (req, res, next) => {
+
+  try {
+    let img_id = '';    
+    if (req.files && Object.keys(req.files).length > 0) {
+      const imagen = req.files.imagen;
+      img_id = (await uploader(imagen.tempFilePath)).public_id;
+    }
+
+    if (req.body.nombre != "" && req.body.profesion != "" && req.body.edad != "" && req.body.tipo != "" && req.body.mail != "" && req.body.telefono != "") {
+      await novedadesModel.insertNovedad({
+        ...req.body,
+        img_id
+      });
+      
+      res.redirect('/admin/novedades');
+      
+    } else {
+      res.render('admin/agregar', {
+        layout: 'admin/layout',
+        error: true,
+        message: 'Todos los campos son requeridos'
+      });
+    }
+  } catch (error) {
+    next(error);
+  }
+});
+
+*/
+  
+  
 
 // CONTROLADOR PARA AGREGAR
-
 router.get('/agregar', (req, res, next) => {
   res.render('admin/agregar', {
     layout: 'admin/layout'
@@ -29,9 +70,8 @@ router.post('/agregar', async (req, res, next) => {
 
     // console.log(req.body); esto para mostrar en la terminal los datos
 
-    if (req.body.nombre != "" && req.body.profesion != "" && req.body.edad != "" && req.body.tipo != "" && req.body.mail != "" && req.body.telefono != "") {
-      // TODO ESTO ES PARA CAPTURAR CADA DATO Y LLEVARLO DEL FORM A LA BASE DE DATOS. CAMBIO CADA DATO DE LA TABLA CLIENTES, FUNIONA OK Y YA ESTA VINCULANDOSE      
-      await novedadesModel.insertNovedad(req.body);
+    if (req.body.nombre != "" && req.body.profesion != "" && req.body.edad != "" && req.body.tipo != "" && req.body.mail != "" && req.body.telefono != "") {    
+    await novedadesModel.insertNovedad(req.body);
 
       res.redirect('/admin/novedades')
     } else {
@@ -114,13 +154,6 @@ router.post('/modificar', async (req, res, next) => {
     })
   }
 });
-
-
-
-
-
-
-
 
 
 module.exports = router;

@@ -3,21 +3,18 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+// var fileUpload = require('express-fileupload'); // FILEUPLOAD DEJAR COMENTADO POR AHORA SI NO LO USO
+var cors = require('cors');   // CORS DEBO PODER HABILITARLO PARA EL API
 
-//la linea de abajo es para indicar que el proyecto va atener variable sde entorno tipo dotenv, par ala integracion con la BD, dejarla funcionando
+
 require('dotenv').config();
-
-
-//armando variables de sesion, luego vere si debo usarlas en el proyecto final. Aca activo en el renglnde abajo que sea requisito las varaibles de sesion
 var session = require('express-session');
-
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-//empeizo a armar la ruta del adimn y login
 var loginRouter = require('./routes/admin/login');
 var adminRouter = require('./routes/admin/novedades');
-
+// var apiRouter = require('./routes/api'); // DA ERROR
 
 var app = express();
 
@@ -31,8 +28,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//POR AHORA DEJARLO COMENTADO, ESTO ES DE LA TAREA DE PETICIONES Y RESPUESTA
-//variables sesion, esto es de la tarea de petiiciones y respuesta, Handlebars y va junto con el archivo index.hbs
+
+//variables sesion
 
 app.use(session({
   secret: 'utn',
@@ -54,29 +51,28 @@ secured = async (req, res, next) => {
   }
  }  
 
-
-
-
+ /* FILEUPLOAD
+ app.use(fileUpload({
+  useTempFiles: true,
+  tempFileDir: './tmp/'
+ }));
+*/
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
 // abajo conecto con la BD para hacer las consutlas
 var pool = require('./models/bd');
 
 /*
-// consulta de SELECT (ANDA PERFECTO)
+// consulta de SELECT (ANDA ok)
 pool.query('select * from inmobiliaria').then(function(resultados) {
   console.log(resultados);
 });
 */
  
 app.use('/admin/login', loginRouter);
-
 app.use('/admin/novedades', secured, adminRouter);
-
-
-
+// app.use('/api', cors(), apiRouter);
 
 /* 
 MAS DE VARIABLES DE SESION, ERA TAREA DE MODILOS ANTERIORES, NO ES NEESARIO PARA EL PROYETO FINAL
@@ -101,9 +97,7 @@ app.get('/', function(req, res) {
     req.session.destroy();
     res.redirect('/');
   });
-
   */
-
 
 
 //Aca pongo los ejemplos  y distitnas rutas para ir probando. Luego tendre que sacar o modificar seguramente. Esto basado en la intoduccion de Node, segureo despes tenga que cambair esto. Esto fue la tarea de Introducciona  Node

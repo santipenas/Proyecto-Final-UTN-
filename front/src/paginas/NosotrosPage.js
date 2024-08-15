@@ -3,6 +3,11 @@ import React from 'react';
 const NosotrosPage = (props) => {
     return (
         <main className="holder">
+
+                <div>
+                    <img src="../../imagenes/servicios8.jpg" width= "100%" height="450" alt="nosotros" />
+                </div>
+
             <div className="historia">
                 <h2>Historia</h2>
                 <p>Peñas Propiedades es el fruto de años de servicio y de vocación de su fundador, Mario Alberto Penas,
