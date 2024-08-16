@@ -542,44 +542,74 @@ formulario input[type="submit"]:hover {
 }
 
 
+/* INICIO NOVEDADES */
 
-
-/* todo lo de abajo vino del archivo base, eliminar o hacerlo comentario
-.App {
-  text-align: center;
+.novedades {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 33px 50px;
+  gap: 32px;
+  justify-content: space-between;
+  /* display: flex; */
+  align-items: center; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.novedades h4 {
+  font-style: italic;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.novedades h2 {
+  border-bottom: 1px solid #CA5D53;
+  padding-bottom: 10px;
+  color: #2e64a1;
+  font-weight: 500;
+  font-style: italic;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.novedades p {
+  font-size: 15px;
+  column-gap: 30px;
+}
+
+
+/*
+
+.servicio {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 16px 0;
   display: flex;
-  flex-direction: column;
+  gap: 32px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.servicio .info h4 {
+  color: #2e64a1;
+  font-weight: 500;
+  font-style: italic;
+  border-bottom: 1px solid #CA5D53;
+  padding-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}*/
+.servicio .info p {
+  font-size: 13px;
+  column-count: 2;
+  column-gap: 30px;
+  text-align: justify;
+}
+
+.servicio img {
+  border-radius: 13px;
+  display: block;
+  max-width: 225px
+}
+
+.servicio:nth-child(even) {  
+  flex-direction: row-reverse;
+}
+
+
+*/

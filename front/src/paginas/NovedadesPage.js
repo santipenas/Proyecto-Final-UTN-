@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import NovedadItem from "../componentes/novedades/NovedadItem";
+import NovedadItem from "../componentes/novedades/NovedadItem"; // CHEQUEAR RUTA SIEMPRE
 
 const NovedadesPage = (props) => {
     const [loading, setLoading] = useState(false);
@@ -19,12 +19,13 @@ const NovedadesPage = (props) => {
 
     return (
         <section className="holder">
-            <h2>Novedades y Clientes Nuevos</h2>
+            <h2>Novedades: Conozca nuestros Nuevos Clientes</h2>
 
-            {loading ? (
+            {   
+                loading ? (
                 <p>Cargando...</p>
-            ) : (
-                novedades.map((item) => (
+                ) : (
+                novedades.map((item => (
                     <NovedadItem
                         key={item.id}
                         nombre={item.nombre}
@@ -33,11 +34,11 @@ const NovedadesPage = (props) => {
                         tipo={item.tipo}
                         mail={item.mail}
                         telefono={item.telefono}
-                    />
+                    />)
                 ))
             )}
         </section>
-    );
+    );                                                                                                                                                              
 };
 
 export default NovedadesPage;

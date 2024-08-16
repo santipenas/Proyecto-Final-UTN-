@@ -3,21 +3,19 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-// var fileUpload = require('express-fileupload'); // FILEUPLOAD DEJAR COMENTADO POR AHORA SI NO LO USO
-var cors = require('cors');   // CORS DEBO PODER HABILITARLO PARA EL API
+// var fileUpload = require('express-fileupload');
+var cors = require('cors');
 
 
 require('dotenv').config();
 var session = require('express-session');
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login');
 var adminRouter = require('./routes/admin/novedades');
-// var apiRouter = require('./routes/api'); // DA ERROR
+var apiRouter = require('./routes/api');
 
 var app = express();
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -28,9 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 //variables sesion
-
 app.use(session({
   secret: 'utn',
   cookie: { maxAge: null },
@@ -51,7 +47,7 @@ secured = async (req, res, next) => {
   }
  }  
 
- /* FILEUPLOAD
+ /* FILEUPLOAD NO LO NECESITO
  app.use(fileUpload({
   useTempFiles: true,
   tempFileDir: './tmp/'
@@ -60,11 +56,10 @@ secured = async (req, res, next) => {
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-// abajo conecto con la BD para hacer las consutlas
 var pool = require('./models/bd');
 
 /*
-// consulta de SELECT (ANDA ok)
+// CONSULTA DE SELECT 
 pool.query('select * from inmobiliaria').then(function(resultados) {
   console.log(resultados);
 });
@@ -72,7 +67,7 @@ pool.query('select * from inmobiliaria').then(function(resultados) {
  
 app.use('/admin/login', loginRouter);
 app.use('/admin/novedades', secured, adminRouter);
-// app.use('/api', cors(), apiRouter);
+app.use('/api', cors(), apiRouter);
 
 /* 
 MAS DE VARIABLES DE SESION, ERA TAREA DE MODILOS ANTERIORES, NO ES NEESARIO PARA EL PROYETO FINAL
