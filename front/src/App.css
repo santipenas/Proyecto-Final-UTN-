@@ -15,21 +15,32 @@ body {
   line-height: 20px;
 }
 
+/* HEADER*/
+
 header {
   background-color: #2e64a1;
-  padding: 16 px 0;
+  padding: 4px 0;
+  text-align: center;   
 }
 
 header h1 {
   color: white;
-  font-size: 40px;
-  font-weight: 300;
-  font-style: italic;
-  display: inline-block;
+  font-size: 36px;
+  font-weight: 100;
+  font-style: oblique;
+  /*display: inline-block;*/
   position: relative;
-  bottom: 35px;
-  margin-left: 20px;
+  /*bottom: 12px;*/
+  margin: 30px;
 }
+
+header img {
+  margin: 8px;
+
+}
+
+
+/*  NAV  */
 
 nav {
   background-color: #CA5D53;
@@ -60,9 +71,10 @@ nav ul li a:hover {
 }
 
 nav ul li a.activo {
-  /*ver ómo al ser una clase dentro de varas etiquetas, combiene aclarar con el . que etoy aplicando solo a la clase interna segun la ruta*/
   background-color: #4c76a5;
 }
+
+/* FOOTER */
 
 footer {
   background-color: #2e64a1;
@@ -421,10 +433,6 @@ h2 {
 }
 
 
-
-
-
-
 /* fin sección galeria*/
 
 
@@ -570,46 +578,6 @@ formulario input[type="submit"]:hover {
 
 .novedades p {
   font-size: 15px;
-  column-gap: 30px;
 }
 
-
-/*
-
-.servicio {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 16px;
-  margin: 16px 0;
-  display: flex;
-  gap: 32px;
-  align-items: center;
-}
-
-.servicio .info h4 {
-  color: #2e64a1;
-  font-weight: 500;
-  font-style: italic;
-  border-bottom: 1px solid #CA5D53;
-  padding-bottom: 10px;
-}
-
-.servicio .info p {
-  font-size: 13px;
-  column-count: 2;
-  column-gap: 30px;
-  text-align: justify;
-}
-
-.servicio img {
-  border-radius: 13px;
-  display: block;
-  max-width: 225px
-}
-
-.servicio:nth-child(even) {  
-  flex-direction: row-reverse;
-}
-
-
-*/
+/* fin seccion NOVEDADES */
