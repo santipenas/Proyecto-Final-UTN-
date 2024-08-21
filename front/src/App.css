@@ -20,7 +20,7 @@ body {
 header {
   background-color: #2e64a1;
   padding: 4px 0;
-  text-align: center;   
+  text-align: center;
 }
 
 header h1 {
@@ -28,17 +28,13 @@ header h1 {
   font-size: 36px;
   font-weight: 100;
   font-style: oblique;
-  /*display: inline-block;*/
-  position: relative;
   /*bottom: 12px;*/
   margin: 30px;
 }
 
 header img {
   margin: 8px;
-
 }
-
 
 /*  NAV  */
 
@@ -78,17 +74,16 @@ nav ul li a.activo {
 
 footer {
   background-color: #2e64a1;
-  ;
-  clear: both;
   color: #333;
   text-align: center;
   padding: 20px 0;
   margin-top: 20px;
-  /*position: fixed;
+  display: flex; 
   bottom: 0px;
   width: 100%;
-  para footer fixed en bottom*/
+  justify-content: center;
 }
+
 
 #leyendafinal {
   font-size: large;
@@ -155,15 +150,12 @@ h2 {
 
 .columnas h4 {
   text-align: center;
-  /*
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 0%;
-  margin: 0px 0;*/
+  text-decoration: underline 1px #CA5D53;
 }
 
 .bienvenidos p {
-  font-size: 20px;
+  font-size: 18px;
+  text-align: justify;
 }
 
 .testimonio {
@@ -203,6 +195,10 @@ h2 {
 .listado div,
 .valores div {
   margin: 40px 5px;
+}
+
+.columnas p{
+  text-align: center;
 }
 
 
@@ -268,14 +264,19 @@ h2 {
 }
 
 .persona h5 {
-  font-size: 15px;
-  margin-top: 5px;
+  font-size: 16px;
+  margin-top: 15px;
 }
 
 .persona h6 {
-  font-size: 12px;
+  font-size: 13px;
   font-style: italic;
   color: rgb(31, 30, 30);
+  border-bottom: white 1px solid;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  border: 1px solid #ccc;
+  border-radius: 9px;
 }
 
 .persona p {
