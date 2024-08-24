@@ -18,7 +18,7 @@ body {
 /* HEADER*/
 
 header {
-  background-color: #2e64a1;
+  background-color: #325485;
   padding: 4px 0;
   text-align: center;
 }
@@ -41,6 +41,7 @@ header img {
 nav {
   background-color: #CA5D53;
   margin-bottom: 20px;
+
 }
 
 nav ul {
@@ -51,7 +52,7 @@ nav ul {
 }
 
 nav ul li {
-  flex-grow: 1;
+  flex-grow: 1;  
 }
 
 nav ul li a {
@@ -73,7 +74,7 @@ nav ul li a.activo {
 /* FOOTER */
 
 footer {
-  background-color: #2e64a1;
+  background-color: #325485;
   color: #333;
   text-align: center;
   padding: 20px 0;
@@ -215,7 +216,7 @@ h2 {
 }
 
 .historia p {
-  font-size: 13px;
+  font-size: 14px;
   column-count: 2;
   column-gap: 30px;
   text-align: justify;
