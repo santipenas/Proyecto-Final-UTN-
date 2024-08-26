@@ -1,43 +1,43 @@
 <!-- DISEÑO DEL FORMULARIO DE EDITAR O MODIFICAR -->
 
 
-<div class="container" style="margin: 100px;">
+<div class="container" style="margin: 120px auto;">
 
     <div class="row">
 
         <div class="col-6 offset-3">
-            <h4>Modificar los datos del Cliente</h4> 
+            <h4 style="text-align: center; margin-bottom: 30px; border-bottom: 1px solid #CA5D53">Modificar los datos del Cliente</h4> 
             <form action="/admin/novedades/modificar" method="post">
                 <input type="hidden" value="{{novedad.id}}" name="id">
 
                 <!--debo adaptar el formulario de modificar para vincularlo con cada elemento de mi tabla de clientes-->
                 
-                <div class="form-group">
+                <div class="form-group mb-3 row">
                     <label for="">Nombre</label>
                     <input type="text" class="form-control" name="nombre" value="{{novedad.nombre}}"> <!-- puedo agregar luego placeholder-->
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mb-3 row">
                     <label for="">Profesion</label>
                     <input type="text" class="form-control" name="profesion" value="{{novedad.profesion}}">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mb-3 row">
                     <label for="">Edad</label>
                     <input type="text" class="form-control" name="edad" value="{{novedad.edad}}">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mb-3 row">
                     <label for="">Tipo de cliente</label>
                     <input type="text" class="form-control" name="tipo" value="{{novedad.tipo}}">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mb-3 row">
                     <label for="">Mail de contacto</label>
                     <input type="text" class="form-control" name="mail" value="{{novedad.mail}}">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mb-3 row">
                     <label for="">Telefono de contacto</label>
                     <input type="text" class="form-control" name="telefono" value="{{novedad.telefono}}">
                 </div>
@@ -54,7 +54,7 @@
                     </div>
                 -->
 
-                <button type="submit" class="btn btn-primary">Modificar</button>
+                <button type="submit" class="btn btn-primary" style="background-color: #CA5D53; margin:30px 50%;">Modificar</button>
             </form>
 
             {{#if error}}
