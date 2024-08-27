@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import NovedadItem from "../componentes/novedades/NovedadItem"; // CHEQUEAR RUTA SIEMPRE
+import NovedadItem from "../componentes/novedades/NovedadItem";
 
 const NovedadesPage = (props) => {
     const [loading, setLoading] = useState(false);

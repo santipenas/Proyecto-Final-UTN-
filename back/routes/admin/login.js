@@ -23,7 +23,7 @@ router.get('/logout', function(req, res, next) {
 
 router.post('/', async (req, res, next) => {
   try {
-    var usuario = req.body.usuario; // esto captura la data de usuario: laura (usuario santiago no funcionaba)
+    var usuario = req.body.usuario; // esto captura la data de usuario: laura
     var password = req.body.password; // esto captura la data de password: 1234
 
     var data = await usuariosModel.getUserByUsernameAndPassword(usuario, password);

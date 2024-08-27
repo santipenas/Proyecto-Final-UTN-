@@ -17,44 +17,11 @@ router.get('/', async function (req, res, next) {
 
   res.render('admin/novedades', {
     layout: 'admin/layout',
-    persona: req.session.nombre, // CUIDADO SI DBO PONER PERSONA O USUARIO EN ESTA LINEA
-    novedades // CAMBIO POR CLIENTES ATENCIO AL TEMPLATE DE HANDLEBAR???
+    persona: req.session.nombre, 
+    novedades 
   });
 });
-
-/*
-// CONTROLADOR AGREGAR IMAGENES. NO HABILITAR YA QUE DABA ERRRO PORQUE NO TENGO PLANEADO PONER IMAGENES
-router.post('/agregar', async (req, res, next) => {
-
-  try {
-    let img_id = '';    
-    if (req.files && Object.keys(req.files).length > 0) {
-      const imagen = req.files.imagen;
-      img_id = (await uploader(imagen.tempFilePath)).public_id;
-    }
-
-    if (req.body.nombre != "" && req.body.profesion != "" && req.body.edad != "" && req.body.tipo != "" && req.body.mail != "" && req.body.telefono != "") {
-      await novedadesModel.insertNovedad({
-        ...req.body,
-        img_id
-      });
-      
-      res.redirect('/admin/novedades');
-      
-    } else {
-      res.render('admin/agregar', {
-        layout: 'admin/layout',
-        error: true,
-        message: 'Todos los campos son requeridos'
-      });
-    }
-  } catch (error) {
-    next(error);
-  }
-});
-
-*/
-  
+ 
   
 
 // CONTROLADOR PARA AGREGAR

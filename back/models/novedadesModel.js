@@ -1,4 +1,4 @@
-// aca puedo conectar con la base de datos para que me traiga todas las novedades de la tabla novedades. 
+// aca puedo conectar con la base de datos para que me traiga todas las novedades de la tabla clientes de mi BD. 
 
 const { Router } = require('express');
 var pool = require('./bd');
@@ -6,7 +6,7 @@ var pool = require('./bd');
 
 //CRUD: CONSULTAR O LISTAR
 async function getNovedades() {
-    var query = 'select * from clientes'; //  CAMBIO: NOVEDADES x CLIENTES, FUNCIONA OK
+    var query = 'select * from clientes'; 
     var rows = await pool.query(query);
     return rows;
 }
@@ -15,7 +15,7 @@ async function getNovedades() {
 //CRUD : INSERTAR o AGREGAR 
 async function insertNovedad(obj) {
     try {
-        var query = 'insert into clientes set ?'; // CAMBIO: NOVEDADES x CLIENTES
+        var query = 'insert into clientes set ?'; 
         var rows = await pool.query(query, [obj]);
         return rows;
         
@@ -28,14 +28,14 @@ async function insertNovedad(obj) {
 
 // CRUD: ELIMINAR
 async function deleteNovedadesById(id) {
-    var query = 'delete from clientes where id = ?'; // CAMBIO : NOVEDADES x CLIENTES
+    var query = 'delete from clientes where id = ?'; 
     var rows = await pool.query(query, [id]);
     return rows;
 }
 
 // CRUD: MODIFICAR LA NOVEDAD
 async function getNovedadById(id) {
-    var query = 'select * from clientes where id = ?'; // CAMBIO : NOVEDADES x CLIENTES
+    var query = 'select * from clientes where id = ?';
     var rows = await pool.query(query, [id]);
     return rows[0];
 }
@@ -43,7 +43,7 @@ async function getNovedadById(id) {
 // PARA MODIFICAR UPDATE DE LOS DATOS
 async function modificarNovedadById(obj, id) {
     try {
-        var query = 'update clientes set ? where id = ?'; // CAMBIO : NOVEDADES x CLIENTES
+        var query = 'update clientes set ? where id = ?'; 
         var rows = await pool.query(query, [obj, id]);
         return rows;
     } catch (error) {
@@ -52,5 +52,5 @@ async function modificarNovedadById(obj, id) {
 }
     
 
-//SIEMPRE RECORDAR EXPORTAR LAS FUNCIONES ACA ABAJO
+
 module.exports = { getNovedades, insertNovedad, deleteNovedadesById, getNovedadById, modificarNovedadById }

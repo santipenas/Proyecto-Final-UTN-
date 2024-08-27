@@ -1,12 +1,6 @@
 /*
-*font-family: "Open Sans", serif;*/
-
-/* Selector Universal para acomodamiento de margin y padding general
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing:border-box;
-}*/
+*font-family: "Open Sans", serif;
+*/
 
 
 body {
@@ -126,7 +120,6 @@ h2 {
 
 .testimonios {
   width: 25%;
-  /*background-color: ;*/
 }
 
 .columnas {
@@ -134,12 +127,6 @@ h2 {
   justify-content: space-between;
   margin-top: 35px;
 }
-
-/*
-.columnas p {
-  text-align: center;
-  font-style: ;
-}*/
 
 .columnas h2 {
   color: #2e64a1;
@@ -507,7 +494,6 @@ h2 {
   padding-bottom: 10px;
 }
 
-/*ajusta palabras del formulario*/
 .formulario p label {
   min-width: 80px;
   display: flex;

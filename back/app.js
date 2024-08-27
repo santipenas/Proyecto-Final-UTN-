@@ -69,61 +69,6 @@ app.use('/admin/login', loginRouter);
 app.use('/admin/novedades', secured, adminRouter);
 app.use('/api', cors(), apiRouter);
 
-/* 
-MAS DE VARIABLES DE SESION, ERA TAREA DE MODILOS ANTERIORES, NO ES NEESARIO PARA EL PROYETO FINAL
-app.get('/', function(req, res) {
-  var conocido = Boolean(req.session.nombre);
-
-  res.render('index', { 
-    title: 'Sesiones en Express.js',
-    conocido: conocido,
-    nombre: req.session.nombre
-  });
-  
-  app.post('/ingresar', function(req, res) {
-    if (req.body.nombre) {
-      req.session.nombre = req.body.nombre;
-    }
-
-    res.redirect('/');
-  });
-
-  app.get('/salir', function(req, res) {
-    req.session.destroy();
-    res.redirect('/');
-  });
-  */
-
-
-//Aca pongo los ejemplos  y distitnas rutas para ir probando. Luego tendre que sacar o modificar seguramente. Esto basado en la intoduccion de Node, segureo despes tenga que cambair esto. Esto fue la tarea de Introducciona  Node
-/*
-app.get('/prueba', function(req, res,next) {
-  res.send('Hola mundo, estoy probando la ruta');
-});
-
-app.get('/home', function(req, res, next) {
-  res.send('Hola mundo, estoy probando la ruta home');
-});
-
-app.get('/nosotros', function(req, res, next) {
-  res.send('Hola mundo, estoy probando la ruta nosotros');
-});
-
-app.get('/servicios', function(req, res, next) {
-  res.send('Hola mundo, estoy probando la ruta servicios');
-});
-
-app.get('/galeria', function(req, res, next) {
-  res.send('Hola mundo, estoy probando la ruta galeria');
-});
-
-app.get('/contacto', function(req, res, next) {
-  res.send('Hola mundo, estoy probando la ruta contacto');
-});
-*/
-
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

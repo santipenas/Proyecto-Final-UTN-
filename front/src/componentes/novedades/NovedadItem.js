@@ -5,7 +5,7 @@ const NovedadItem = (props) => {
 
     return (
         <div className="novedades">
-            {/* DAR ESTILO LUEGO */}        
+                    
             <h2>{nombre}</h2>
             <h4>{profesion}</h4>
             <p>{edad}</p>
